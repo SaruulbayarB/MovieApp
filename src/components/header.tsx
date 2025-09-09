@@ -13,6 +13,7 @@ import { FiFilm } from "react-icons/fi";
 
 import * as React from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ModeToggle } from "./themetoggler";
 
 export function ThemeProvider({
   children,
@@ -23,10 +24,10 @@ export function ThemeProvider({
 
 export const Header = () => {
   return (
-    <div className="flex justify-center items-center gap-4">
+    <div className="flex items-center gap-4">
       <FiFilm className=""></FiFilm>
-      <p className="text-indigo-700 text-base italic">Movie Z</p>
-      <NavigationMenu>
+      <p className="text-indigo-700 text-base italic ml-2">Movie Z</p>
+      <NavigationMenu className="ml-100">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Genres</NavigationMenuTrigger>
@@ -62,6 +63,7 @@ export const Header = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <ModeToggle></ModeToggle>
     </div>
   );
 };

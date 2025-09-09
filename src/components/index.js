@@ -1,2 +1,3 @@
-export * from "./Header";
-export * from "./MovieCard";
+export * from "./header";
+export * from "./moviecard";
+export * from "./upcomingCard";
