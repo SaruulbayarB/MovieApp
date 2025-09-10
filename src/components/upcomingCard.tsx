@@ -8,7 +8,7 @@ import {
 
 import { MdOutlineStar } from "react-icons/md";
 
-type UpcomingCardProps = {
+type Movie = {
   status: string;
   title: string;
   score: number;
@@ -16,23 +16,22 @@ type UpcomingCardProps = {
   desc: string;
 };
 
-export const UpcomingCard = ({
-  status,
-  title,
-  score,
-  image,
-}: UpcomingCardProps) => {
+type UpcomingCardProps = {
+  movies: Movie[];
+};
+
+export const UpcomingCard = ({ movies }: UpcomingCardProps) => {
   return (
-    <Carousel className="w-[1440px] h-[600px]">
-      <CarouselContent>
-        <CarouselItem>
-          <img src={image} alt={title} className="w-[1440px] h-[600px]" />
-        </CarouselItem>
-        <CarouselItem></CarouselItem>
-        <CarouselItem>...</CarouselItem>
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <div className="w-[1440px] h-[600px] mt-8">
+      <Carousel>
+        <CarouselContent>
+          <CarouselItem>1</CarouselItem>
+          <CarouselItem>2</CarouselItem>
+          <CarouselItem>3</CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </div>
   );
 };
