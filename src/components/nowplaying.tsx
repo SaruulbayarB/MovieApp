@@ -5,35 +5,27 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { movieType } from "@/types";
 
 import { MdOutlineStar } from "react-icons/md";
 
-type Movie = {
-  status: string;
-  title: string;
-  score: number;
-  image: string;
-  desc: string;
-};
-
 type UpcomingCardProps = {
-  image: string;
-  title: string;
+  movies: movieType[];
 };
 
-export const NowPlayingCarousel = ({ image, title }: UpcomingCardProps) => {
+export const NowPlayingCarousel = ({ movies }: UpcomingCardProps) => {
   return (
-    <Carousel className="w-[1440px] h-[600px]">
+    <Carousel>
       <CarouselContent>
-        <CarouselItem>
-          <img
-            src={image}
-            alt={title}
-            className="w-[230px] h-[340px] object-cover"
-          />
-        </CarouselItem>
-        <CarouselItem>2</CarouselItem>
-        <CarouselItem>3</CarouselItem>
+        {movies.map((movie) => (
+          <CarouselItem>
+            <img
+              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+              alt={movie.title}
+              className="w-[1440px] h-[600px] object-cover"
+            />
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

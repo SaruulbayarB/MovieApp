@@ -11,25 +11,7 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { IoIosArrowRoundForward } from "react-icons/io";
-
-type movieType = {
-  adult: boolean;
-  backdrop_path: string;
-  genre_ids: number[];
-  id: number;
-  original_language: string;
-  overview: string;
-  poster_path: string;
-  release_date: string;
-  title: string;
-  vote_average: number;
-};
-
-type movieResponseType = {
-  page: number;
-  totalPages: number;
-  results: movieType[];
-};
+import { movieResponseType } from "@/types";
 
 // 1. UPCOMING
 export default async function Home() {
@@ -111,14 +93,8 @@ export default async function Home() {
   return (
     <div>
       <Header />
-      <div className="flex w-[1440px] h-[600px] mt-8">
-        {nowPlayingMovies.results.map((movie) => (
-          <NowPlayingCarousel
-            key={movie.id}
-            title={movie.title}
-            image={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-          />
-        ))}
+      <div className="flex flex-wrap w-[1440px] justify-center gap-10 mt-5">
+        <NowPlayingCarousel movies={nowPlayingMovies.results} />
       </div>
       <div className="flex pl-17 mt-10">
         <div className="text-2xl text-[#09090B] font-semibold">Upcoming</div>

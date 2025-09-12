@@ -1,7 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
-import { Header, MovieCard, UpcomingCard } from "@/components";
+import { Header, MovieCard } from "@/components";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -24,60 +24,14 @@ export default function Home() {
         Search Result
       </div>
       <div className="flex">
-        <NavigationMenu className="ml-100 ">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Genres</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <div className="w-[335px] h-[315px]">
-                  <h1 className="text-[#09090B] text-2xl font-semibold">
-                    Genres
-                  </h1>
-
-                  <div className="text-[#09090B] mt-1 font-normal text-base">
-                    See lists of movies by genre
-                  </div>
-                  <div className="flex flex-wrap">
-                    <Link href="/genres">
-                      <NavigationMenuLink>
-                        <button className="flex items-center gap-1 whitespace-wrap border border-[#E4E4E7] rounded-md pl-1 text-[#09090B]">
-                          Action
-                          <ChevronRight />
-                        </button>
-                      </NavigationMenuLink>
-                    </Link>
-                    <NavigationMenuLink>Adventure</NavigationMenuLink>
-                    <NavigationMenuLink>Animation</NavigationMenuLink>
-                    <NavigationMenuLink>Biography</NavigationMenuLink>
-                    <NavigationMenuLink>Comedy</NavigationMenuLink>
-                    <NavigationMenuLink>Crime</NavigationMenuLink>
-                    <NavigationMenuLink>Documentary</NavigationMenuLink>
-                    <NavigationMenuLink>Drama</NavigationMenuLink>
-                    <NavigationMenuLink>Family</NavigationMenuLink>
-                    <NavigationMenuLink>Fantasy</NavigationMenuLink>
-                    <NavigationMenuLink>Film-Noir</NavigationMenuLink>
-                    <NavigationMenuLink>Game-Show</NavigationMenuLink>
-                    <NavigationMenuLink>History</NavigationMenuLink>
-                    <NavigationMenuLink>Horror</NavigationMenuLink>
-                    <NavigationMenuLink>Music</NavigationMenuLink>
-                    <NavigationMenuLink>Musical</NavigationMenuLink>
-                    <NavigationMenuLink>Mystery</NavigationMenuLink>
-                    <NavigationMenuLink>News</NavigationMenuLink>
-                    <NavigationMenuLink>Reality-TV</NavigationMenuLink>
-                    <NavigationMenuLink>Romance</NavigationMenuLink>
-                    <NavigationMenuLink>Sci-Fi</NavigationMenuLink>
-                    <NavigationMenuLink>Short</NavigationMenuLink>
-                    <NavigationMenuLink>Sport</NavigationMenuLink>
-                    <NavigationMenuLink>Talk-show</NavigationMenuLink>
-                    <NavigationMenuLink>Thriller</NavigationMenuLink>
-                    <NavigationMenuLink>War</NavigationMenuLink>
-                    <NavigationMenuLink>Western</NavigationMenuLink>
-                  </div>
-                </div>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <div className="w-200 h-100 bg-indigo-300">
+          <button className="flex items-center gap-1 whitespace-wrap border border-[#E4E4E7] rounded-md pl-1 text-[#09090B] text-xs font-semibold w-15 h-5">
+            Action
+          </button>
+          <button className="flex items-center gap-1 whitespace-wrap border border-[#E4E4E7] rounded-md pl-1 text-[#09090B] text-xs font-semibold w-15 h-5">
+            Adventure
+          </button>
+        </div>
         <div className="w-[886px] h-[1189px] bg-amber-300"></div>
       </div>
 
