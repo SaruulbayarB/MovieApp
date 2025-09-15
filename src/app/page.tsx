@@ -13,6 +13,23 @@ import {
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { movieResponseType } from "@/types";
 
+// 0. Get movies by ID
+
+export const getMoviesByGenreId = async (genreIds: string, page: string) => {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/discover/movie?language=en&with_genres=${genreIds}&page=${page}`,
+    {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${process.env.TMDB_ACCESS_KEY}`,
+      },
+    }
+  );
+  const data = await res.json();
+  return data;
+};
+
 // 1. UPCOMING
 export default async function Home() {
   const getUpcomingMovies = async () => {
