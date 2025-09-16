@@ -42,9 +42,9 @@ const Genre = async ({ searchParams }: GenrePageProps) => {
     <div className="pl-20">
       <Header />
       <div className="text-[#09090B] text-3xl font-normal mt-20">
-        Search Results
+        Search Result
       </div>
-      <div className="flex mt-10">
+      <div className="flex">
         <div className="w-100 h-100 bg-indigo-300">
           <button className="flex items-center gap-1 whitespace-wrap border border-[#E4E4E7] rounded-md pl-1 text-[#09090B] text-xs font-semibold w-15 h-5">
             Action

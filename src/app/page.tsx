@@ -159,7 +159,6 @@ export default async function Home() {
           />
         ))}
       </div>
-      //
       {/* FOOTER  */}
       <div className="w-[1440px] h-[280px] bg-indigo-700 mt-13 text-[#FAFAFA] text-sm font-normal flex pt-5 justify-around">
         <div>
