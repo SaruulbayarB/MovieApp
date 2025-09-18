@@ -19,6 +19,7 @@ import { ModeToggle } from "./themetoggler";
 import { ChevronRight } from "lucide-react";
 
 import Link from "next/link";
+import { SearchSection } from "./SearchSection";
 
 export function ThemeProvider({
   children,
@@ -35,7 +36,7 @@ export const Header = async () => {
         method: "GET",
         headers: {
           accept: "application/json",
-          Authorization: `Bearer ${process.env.TMDB_ACCESS_KEY}`,
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_KEY_TMDB_ACCESS_KEY}`,
         },
       }
     );
@@ -82,10 +83,7 @@ export const Header = async () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="flex relative w-[379px]">
-        <CiSearch className="ml-1 absolute w-4 h-4 mt-2.5" />
-        <Input className="w-[379px] pl-8" placeholder="Search.." />
-      </div>
+      <SearchSection></SearchSection>
       <div className="ml-25">
         <ModeToggle></ModeToggle>
       </div>

@@ -19,7 +19,7 @@ export const NowPlayingCarousel = ({ movies }: UpcomingCardProps) => {
       <Carousel>
         <CarouselContent>
           {movies.map((movie) => (
-            <CarouselItem className="relative">
+            <CarouselItem key={movie.id} className="relative">
               <div className="absolute top-32 left-32">
                 <p className="text-md text-[#FFFFFF]">Now Playing:</p>
                 <p className="text-4xl text-[#FFFFFF] mt-2">{movie.title}</p>
@@ -48,8 +48,8 @@ export const NowPlayingCarousel = ({ movies }: UpcomingCardProps) => {
                   <path
                     d="M3.33301 2L12.6663 8L3.33301 14V2Z"
                     stroke="#18181B"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>
