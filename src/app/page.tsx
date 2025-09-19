@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { movieResponseType } from "@/types";
+import Link from "next/link";
 
 // 0. Get movies by ID
 
